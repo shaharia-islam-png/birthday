@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top,
+    #fbe8ff 0%,
+    #f3d1ff 35%,
+    #e0c3ff 65%,
+    #c49bff 100%);
+  color: #3b285c;
+}
+
+/* main card */
+.card {
+  width: 360px;
+  max-width: 90vw;
+  padding: 24px 22px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 18px 45px rgba(112, 54, 178, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(198, 153, 255, 0.15);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #6e3fb7;
+  margin-bottom: 10px;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #b46cff;
+  box-shadow: 0 0 10px rgba(180, 108, 255, 0.8);
+}
+
+.title-script {
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  color: #4c2d7a;
+  text-shadow:
+    0 0 6px rgba(254, 245, 255, 0.9),
+    0 0 12px rgba(138, 80, 214, 0.4);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #70509c;
+  margin-bottom: 18px;
+}
+
+.name-highlight {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f5e4ff, #e5caff);
+  font-weight: 600;
+  color: #4b2a7f;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 16px rgba(163, 110, 255, 0.35);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #6c4a98;
+  box-shadow: 0 2px 7px rgba(124, 71, 194, 0.25);
+}
+
+.message-short {
+  font-size: 13px;
+  color: #5a427f;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #c27dff, #f3b3ff);
+  color: #fff;
+  box-shadow:
+    0 10px 20px rgba(138, 75, 214, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(1.05);
+  box-shadow:
+    0 12px 26px rgba(114, 61, 195, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow:
+    0 6px 14px rgba(114, 61, 195, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #7a5ba9;
+}
+
+/* cake + candle */
+.cake {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 18px;
+}
+
+.cake-plate {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 14px;
+  border-radius: 999px;
+  background: #e3d2ff;
+  box-shadow: 0 6px 12px rgba(94, 63, 155, 0.4);
+}
+
+.cake-body {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 55px;
+  border-radius: 18px 18px 10px 10px;
+  background: linear-gradient(180deg, #fbe3ff, #e3b4ff);
+  box-shadow: 0 6px 10px rgba(113, 73, 172, 0.35);
+}
+
+.cake-top {
+  position: absolute;
+  bottom: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 10px;
+  border-radius: 999px;
+  background: #fff5ff;
+  box-shadow: 0 2px 4px rgba(137, 92, 186, 0.4);
+}
+
+.candle {
+  position: absolute;
+  bottom: 68px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 26px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f7f2ff 0,
+    #f7f2ff 4px,
+    #d7b6ff 4px,
+    #d7b6ff 8px
+  );
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* flame off by default */
+.flame {
+  width: 14px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #fff 0%, #ffd27f 40%, #ff8f4b 100%);
+  margin-top: -18px;
+  opacity: 0;
+  transform-origin: bottom center;
+}
+
+/* lit state (JS theke class add hobe) */
+.candle.lit .flame {
+  opacity: 1;
+  animation: flameFlicker 0.4s infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% {
+    transform: translateX(-1px) scale(0.96);
+    filter: drop-shadow(0 0 4px rgba(255, 186, 120, 0.9));
+  }
+  100% {
+    transform: translateX(1px) scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 200, 140, 1));
+  }
+}
+
+/* overlay wish page */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(54, 28, 97, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wish-box {
+  width: 360px;
+  max-width: 90vw;
+  background: radial-gradient(circle at top left, #f9e8ff, #e4c8ff);
+  border-radius: 22px;
+  padding: 22px 20px 18px;
+  box-shadow:
+    0 22px 50px rgba(53, 19, 105, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+.wish-title {
+  font-family: "Pacifico", cursive;
+  font-size: 22px;
+  color: #4b2d78;
+  margin-bottom: 10px;
+}
+
+.wish-text {
+  font-size: 13px;
+  color: #4e356f;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #4c2f83;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 14px rgba(108, 71, 179, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(95, 64, 160, 0.55);
+}
